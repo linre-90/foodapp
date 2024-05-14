@@ -1,0 +1,1 @@
+This is a sample app to brush up Node, Flutter and React skills. Idea was to create a system where burger order is sent to restaurant from application and application receives order state changes as it proceeds.
