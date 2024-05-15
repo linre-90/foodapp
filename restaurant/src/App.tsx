@@ -37,7 +37,7 @@ function OrderComponent({order, id, orderStateUpdate, orderFullyProcessed}: Orde
             case OrderState.READY:
                 if(await orderStateUpdate(id, OrderState.DELIVERED)){
                     setOrderState(OrderState.DELIVERED);
-                    // We dont do anything with completed orders, request updated order list from backend.
+                    // We don't do anything with completed orders, request updated order list from backend.
                     orderFullyProcessed();
                 }
                 break;
@@ -101,7 +101,7 @@ function App() {
         )
     }
 
-    // Convert order map to components.
+    // Convert order map to orderComponents.
     orders.forEach((_, k) => {
         orderComponents.push(<OrderComponent key={k} order={orders.get(k)} id={k} orderStateUpdate={updateOrderState} orderFullyProcessed={refresh}/>);
     });

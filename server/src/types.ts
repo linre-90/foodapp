@@ -4,19 +4,6 @@ export interface ServerToClientEvents {
     onOrderStatusChanged: (arg: OrderStateUpdate) => void;
 }
 
-export interface ClientToServerEvents {
-    hello: () => void;
-}
-
-export interface InterServerEvents {
-    ping: () => void;
-}
-
-export interface SocketData {
-    name: string;
-    age: number;
-}
-
 export enum OrderState{
     WAITING,
     PREPARING,
